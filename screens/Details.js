@@ -26,13 +26,14 @@ export default class Details extends React.Component {
     return {
       title: navigation.getParam("itemName", ""),
       headerStyle: {
-        backgroundColor: "darkblue"
+        backgroundColor: "lightblue"
       },
       headerTitleStyle: {
         color: "white",
         width: "80%",
         textAlign: "center",
-        fontFamily: "Dosis-Bold"
+        fontFamily: "Dosis-Bold",
+        fontWeight:"300"
       },
       headerTintColor: "white"
     };

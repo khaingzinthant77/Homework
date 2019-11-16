@@ -16,52 +16,59 @@ const RouteConfig = {
     screen: Home,
     navigationOptions: () => ({
       headerStyle: {
-        backgroundColor: "blue",
+        backgroundColor: "lightblue",
         elevation: 0 //For Android to hide header bottom shadow color
-      },
+      }
     })
   },
   Categories: {
     screen: Categories,
     navigationOptions: () => ({
       title: "Category Lists",
-      headerStyle:{backgroundColor:"blue"},
-      headerTitleStyle: {color:"white",textAlign:"center",width:"80%"},
+      headerStyle: { backgroundColor: "lightblue" },
+      headerTitleStyle: {
+        color: "white",
+        textAlign: "center",
+        width: "80%",
+        fontFamily: "Dosis-Bold",
+        fontWeight: "300"
+      },
       //change back key color
-      headerTintColor:"white"
+      headerTintColor: "white"
     })
   },
-  // Categories: {
-  //   screen: Categories,
-  //   navigationOptions: () => ({
-  //     title: "Category List",
-  //     headerStyle:{backgroundColor:"darkblue"},
-  //     headerTitleStyle: {color:"white",textAlign:"center",width:"80%"},
-  //     //change back key color
-  //     headerTintColor:"white"
-  //   })
-  // },
+
   Listing: {
     screen: Listing,
     navigationOptions: () => ({
       title: "Action Figures",
-      headerStyle:{backgroundColor:"darkblue"},
-      headerTitleStyle: {color:"white",textAlign:"center",width:"80%"},
-      //change back key color
-      headerTintColor:"white"
+      headerStyle: { backgroundColor: "lightblue" },
+      headerTitleStyle: {
+        color: "white",
+        textAlign: "center",
+        width: "80%",
+        fontFamily: "Dosis-Bold",
+        fontWeight: "300"
+      },
+      headerTintColor: "white"
     })
   },
   Details: {
-    screen: Details,
+    screen: Details
   },
   Map: {
     screen: Map,
     navigationOptions: () => ({
       title: "You can buy here...",
-      headerStyle:{backgroundColor:"darkblue"},
-      headerTitleStyle: {color:"white",textAlign:"center",width:"80%"},
-      //change back key color
-      headerTintColor:"white"
+      headerStyle: { backgroundColor: "lightblue" },
+      headerTitleStyle: {
+        color: "white",
+        textAlign: "center",
+        width: "80%",
+        fontFamily: "Dosis-Bold",
+        fontWeight: "300"
+      },
+      headerTintColor: "white"
     })
   }
 };

@@ -7,7 +7,8 @@ import {
   ScrollView,
   Image,
   FlatList,
-  ActivityIndicator
+  ActivityIndicator,
+  TouchableOpacity
 } from "react-native";
 import * as Font from "expo-font";
 export default class App extends React.Component {
@@ -87,22 +88,22 @@ export default class App extends React.Component {
             data={this.state.FlatListItems}
             ItemSeparatorComponent={this.FlatListItemSeparator}
             renderItem={({ item }) => (
-              <View style={{ flex: 1, flexDirection: "row" }}>
-                <Image source={item.image} style={styles.imageView} />
-                <Text
-                  style={styles.item}
-                  onPress={() =>
-                    this.props.navigation.navigate("Details", {
-                      itemName: item.value,
-                      photo: item.image,
-                      text: item.text,
-                      price: item.price
-                    })
-                  }
-                >
-                  {item.value}
-                </Text>
-              </View>
+              <TouchableOpacity
+                onPress={() =>
+                  this.props.navigation.navigate("Details", {
+                    itemName: item.value,
+                    photo: item.image,
+                    text: item.text,
+                    price: item.price
+                  })
+                }
+                activeOpacity={0.8}
+              >
+                <View style={{ flex: 1, flexDirection: "row" }}>
+                  <Image source={item.image} style={styles.imageView} />
+                  <Text style={styles.item}>{item.value}</Text>
+                </View>
+              </TouchableOpacity>
             )}
             keyExtractor={(item, index) => index.toString()}
           ></FlatList>
@@ -130,7 +131,7 @@ const styles = StyleSheet.create({
   imageView: {
     width: "20%",
     height: 100,
-    margin: 7,
+    margin: 7
   },
   item: {
     width: "50%",
